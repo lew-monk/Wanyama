@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Maps from "./components/MapComponent";
+import AddSighting from "./components/SightingComponent";
+import { animalSelector } from "./components/AnimalSightingSlice";
+import { useSelector } from "react-redux";
 
 function App() {
+  const animalsSighted = useSelector(animalSelector);
+
+  const handleAdd = (e) => {
+    document.querySelector(".add-button").classList.toggle("open");
+    document.querySelector(".container").classList.toggle("slide-open");
+    document
+      .querySelector(".spotted-animal")
+      .classList.toggle("spotted-animal-open");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="add-button" onClick={handleAdd}>
+        <img
+          src={window.location.origin + "/assets/images/Add-Button.png"}
+          alt="add-button"
+        />
+      </div>
+      <div className="map">{<Maps animal={animalsSighted} />}</div>
+      <AddSighting />
     </div>
   );
 }
