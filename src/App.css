@@ -19,11 +19,7 @@
   justify-content: center;
   transition: 0.5s all ease-in;
 }
-@media (min-width: 900px) {
-  .add-button {
-    top: 56%;
-  }
-}
+
 .add-button img {
   transition: 0.5s all ease-in;
 }
@@ -48,12 +44,7 @@
   flex-direction: column;
   justify-content: center;
 }
-@media (min-width: 900px) {
-  .container {
-    border-radius: 0;
-    height: 70vh;
-  }
-}
+
 .slide-open {
   transform: translateY(-100%);
   overflow: hidden;
@@ -66,11 +57,7 @@
   height: 50%;
   margin-top: 3rem;
 }
-@media (min-width: 900px) {
-  .spotted-animal {
-    overflow: hidden;
-  }
-}
+
 @keyframes animalOpacity {
   0% {
     opacity: 0;
@@ -119,4 +106,30 @@
   color: #a58228;
   border: none;
   border-radius: 1.5rem;
+}
+@media (min-width: 900px) {
+  .container {
+    border-radius: 0;
+    height: 70vh;
+  }
+  .spotted-animal {
+    overflow-y: hidden;
+    overflow-x: auto;
+    margin-top: -8rem;
+    z-index: 2;
+  }
+  .animal-image {
+    padding: 1rem;
+  }
+  .slide-open {
+    transform: translateY(-70%);
+    overflow: hidden;
+  }
+  .add-button {
+    top: 61.5%;
+  }
+  .add-sighting button {
+    margin-top: -4rem;
+    z-index: 3;
+  }
 }
