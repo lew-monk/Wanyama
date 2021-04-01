@@ -23,7 +23,7 @@ function App() {
           alt="add-button"
         />
       </div>
-      <div className="map">{<Maps animal={animalsSighted} />}</div>
+      <div className="map">{/* <Maps animal={animalsSighted} /> */}</div>
       <AddSighting />
     </div>
   );

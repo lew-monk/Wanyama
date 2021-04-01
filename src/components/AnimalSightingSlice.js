@@ -4,6 +4,7 @@ const initialState = [
   {
     animalName: null,
     timeSpotted: null,
+    marker: null,
     location: {},
   },
 ];
@@ -20,6 +21,7 @@ const animalSlice = createSlice({
           lat: action.payload.location["lat"],
           lng: action.payload.location["lng"],
         },
+        marker: action.payload.marker,
       };
 
       return void (state = state.push(animalSighting));

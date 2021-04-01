@@ -6,6 +6,7 @@ import { add } from "./AnimalSightingSlice";
 const AddSighting = () => {
   const [animal, setAnimal] = useState(null);
   const [location, setLocation] = useState(null);
+  const [marker, setMarker] = useState();
   const dispatch = useDispatch();
   const date = new Date();
   date.setHours(date.getHours());
@@ -16,6 +17,7 @@ const AddSighting = () => {
     const animalSighting = {
       animal,
       location,
+      marker,
       date,
     };
     dispatch(add(animalSighting));
@@ -31,6 +33,7 @@ const AddSighting = () => {
               className="animal-image"
               onClick={() => {
                 setAnimal(animal.name);
+                setMarker(animal.marker);
                 if (navigator.geolocation) {
                   console.log(
                     navigator.geolocation.getCurrentPosition((position) =>

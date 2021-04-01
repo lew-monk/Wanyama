@@ -30,6 +30,10 @@ const Maps = (animal) => {
                 lat: sighting.location["lat"],
                 lng: sighting.location["lng"],
               }}
+              icon={{
+                url: sighting.marker,
+                scaledSize: new window.google.maps.Size(30, 30),
+              }}
             >
               {console.log(sighting.location)}
             </Marker>
