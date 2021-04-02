@@ -1,3 +1,13 @@
+Wanyama is web application meant to help with locating wildlife based on input from other tourists.
+
+Once an animal is spotted, one can pin their current loaction on the map and the animal sighted is pinned on the current location for others.
+
+The plan is to add more data to use the dataset as practice for my data analytics skills
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
